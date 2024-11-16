@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <title>Crie seu convite</title>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="invite-card">
+        <img src="./assets/favicon.svg" />
+        <img src="./assets/logo.svg" />
+        <p>Crie um convite digital para o seu evento</p>
+      </aside>
+      <main>
+        <div class="form-content">
+          <h1>Crie seu convite</h1>
+          <form>
+            <fieldset>
+              <legend>
+                <img src="./assets/icons/calendar.svg" alt="" />
+                Sobre o evento
+              </legend>
+
+              <div class="input-wrapper">
+                <label for="event-name">Título</label>
+                <input
+                  id="event-name"
+                  type="text"
+                  placeholder="Nome do evento"
+                />
+              </div>
+
+              <div class="input-group">
+                <div class="input-wrapper">
+                  <label for="event-date">Data</label>
+                  <input id="event-date" type="datetime-local" lang="pt-br" />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

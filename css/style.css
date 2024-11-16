@@ -1,0 +1,35 @@
+@import url(global.css);
+
+.page {
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.invite-card {
+  height: 100%;
+  width: 100%;
+  max-width: 25rem;
+  background: url(../assets/invite-bg.png) center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  & img:first-child {
+    width: 3rem;
+  }
+  & img {
+    max-width: 150px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+main {
+  width: 100%;
+  overflow: auto;
+  background-color: var(--shape-body);
+  padding: 5rem 1.5rem;
+  border-radius: 0.75rem;
+}
