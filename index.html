@@ -34,6 +34,7 @@
                 <label for="event-name">Título</label>
                 <input
                   id="event-name"
+                  name="event-name"
                   type="text"
                   placeholder="Nome do evento"
                 />
@@ -41,11 +42,319 @@
 
               <div class="input-group">
                 <div class="input-wrapper">
-                  <label for="event-date">Data</label>
-                  <input id="event-date" type="datetime-local" lang="pt-br" />
+                  <label for="event-date-initial">Início</label>
+                  <input
+                    id="event-date-initial"
+                    name="envent-date-initial"
+                    type="datetime-local"
+                    lang="pt-br"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="event-date-end">Fim</label>
+                  <input
+                    id="event-date-end"
+                    name="envent-date-end"
+                    type="datetime-local"
+                    lang="pt-br"
+                    placeholder="DD/MM/AAAA, --:--"
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <div class="input-wrapper">
+                  <p>Tipo</p>
+                  <div class="radio-event-select-wrapper">
+                    <div class="radio-event-select-item"></div>
+                    <label for="event-type-presential">Presencial</label>
+                    <input
+                      type="radio"
+                      name="event-type"
+                      id="event-type-presential"
+                    />
+                  </div>
+                  <div class="radio-event-select-item"></div>
+                  <label for="event-type-online">Online</label>
+                  <input
+                    type="radio"
+                    name="event-type"
+                    id="event-type-online"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="event-local">Local</label>
+                  <input
+                    type="text"
+                    id="event-local"
+                    name="event-local"
+                    placeholder="Link ou endereço"
+                  />
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-description">Descrição</label>
+                <textarea
+                  name="event-description"
+                  id="event-description"
+                  rows="5"
+                  placeholder="Escreva sobre os detalhes do evento"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>
+                <img src="./assets/icons/paint.svg" alt="" />
+                Personalização
+              </legend>
+
+              <div class="input-wrapper">
+                <p>Cor principal</p>
+                <div class="group-color-selected">
+                  <div class="color-selected">
+                    <label for="color-selected-blue">azul</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-blue"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-navy">navy</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-navy"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-purple">purple</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-purple"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-fuschia">fuschia</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-fuschia"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-red">red</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-red"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-orange">orange</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-orange"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-yellow">yellow</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-yellow"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-lime">lime</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-lime"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-green">green</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-green"
+                    />
+                  </div>
+                  <div class="color-selected">
+                    <label for="color-selected-cyan">cyan</label>
+                    <input
+                      type="radio"
+                      name="color-selected"
+                      id="color-selected-cyan"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <p>Tema do evento</p>
+                <div class="group-theme-selector">
+                  <div class="theme-selector-item">
+                    <label for="theme-birthday">Aniversário</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-birthday"
+                    />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-kids">Infantil</label>
+                    <input type="radio" name="theme-selected" id="theme-kids" />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-graduation">Formatura</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-graduation"
+                    />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-marriage">Casamento</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-marriage"
+                    />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-baby">Chá de bebê</label>
+                    <input type="radio" name="theme-selected" id="theme-baby" />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-bridal">Chá de panela</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-bridal"
+                    />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-carnaval">Carnaval</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-carnaval"
+                    />
+                  </div>
+                  <div class="theme-selector-item">
+                    <label for="theme-other">Outro</label>
+                    <input
+                      type="radio"
+                      name="theme-selected"
+                      id="theme-other"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <div class="input-wrapper">
+                  <p>Estilo</p>
+                  <div class="toogle">
+                    <label for="event-style-dark">Escuro</label>
+                    <input
+                      type="checkbox"
+                      name="event-style-dark"
+                      id="event-style-dark"
+                    />
+                  </div>
+                  <div class="toogle">
+                    <label for="event-style-light">Claro</label>
+                    <input
+                      type="checkbox"
+                      name="event-style-light"
+                      id="event-style-light"
+                    />
+                  </div>
                 </div>
               </div>
             </fieldset>
+
+            <fieldset>
+              <legend>
+                <img src="./assets/icons/contact.svg" />
+                Dados para contato
+              </legend>
+
+              <div class="input-wrapper">
+                <label for="full-name">Nome</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nome completo"
+                />
+              </div>
+              <div class="input-group">
+                <div class="input-wrapper">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="email@email.com"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="phone">Telefone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    placeholder="(99) 99999-9999"
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="checkbox-group">
+              <div class="checkbox-validate-wrapper">
+                <label for="checkbox-conditions"
+                  >Li e concordo com os Termos e Condições e com a Política de
+                  Privacidade</label
+                >
+                <input
+                  type="checkbox"
+                  name="checkbox-conditions"
+                  id="checkbox-conditions"
+                />
+              </div>
+              <div class="checkbox-validate-wrapper">
+                <label for="checkbox-marketing-email"
+                  >Aceito receber atualizações e promoções por e-mail</label
+                >
+                <input
+                  type="checkbox"
+                  name="checkbox-marketing-email"
+                  id="checkbox-marketing-email"
+                />
+              </div>
+              <div class="checkbox-validate-wrapper">
+                <label for="checkbox-marketing-sms"
+                  >Aceito receber atualizações e promoções por SMS</label
+                >
+                <input
+                  type="checkbox"
+                  name="checkbox-marketing-sms"
+                  id="checkbox-marketing-sms"
+                />
+              </div>
+            </fieldset>
+            <button type="submit">
+              <img src="./assets/icons/invite-icon.svg" alt="" />
+              Gerar convite
+            </button>
           </form>
         </div>
       </main>

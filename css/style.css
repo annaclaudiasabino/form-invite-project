@@ -5,10 +5,14 @@
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
+  position: relative;
 }
 
 .invite-card {
-  height: 100%;
+  position: sticky;
+  top: 1.25rem;
+
+  height: 96vh;
   width: 100%;
   max-width: 25rem;
   background: url(../assets/invite-bg.png) center / cover no-repeat;
@@ -28,8 +32,162 @@
 
 main {
   width: 100%;
-  overflow: auto;
+  height: 100%;
   background-color: var(--shape-body);
   padding: 5rem 1.5rem;
   border-radius: 0.75rem;
+}
+
+h1,
+legend {
+  font-family: var(--font-family-secondary);
+  color: var(--text-heading);
+}
+
+h1 {
+  margin-bottom: 2.5rem;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  & img {
+    margin-top: -0.25rem;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-content {
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--brand-dark);
+  border: none;
+  color: var(--text-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  & img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  &:hover {
+    background-color: var(--brand-mid);
+  }
+}
+
+input,
+textarea {
+  font-family: var(--font-family-primary);
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  color: var(--text-body);
+  font-size: 1rem;
+  font-weight: 400;
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+  &:focus {
+    outline: 1px solid var(--brand-light);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background-color: var(--input-base) !important;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-validate-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+
+  & input[type='checkbox'] {
+    position: relative;
+    outline: none;
+    cursor: pointer;
+  }
+  & input[type='checkbox']:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: #1c1f21;
+    border: 1px solid #363b40;
+    border-radius: 4px;
+  }
+  & input[type='checkbox']:checked:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: #1c1f21;
+    border: 1px solid #59b2ff;
+  }
+  & input[type='checkbox']:checked:after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 8px;
+    border: solid #59b2ff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    left: 8px;
+  }
 }
